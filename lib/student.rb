@@ -108,7 +108,7 @@ class Student
       binding.pry
 
       DB[:conn].execute(sql)
-    end
+    end.first
 
 
 
