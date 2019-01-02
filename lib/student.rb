@@ -107,8 +107,9 @@ class Student
       SQL
       binding.pry
 
-      DB[:conn].execute(sql)
-    end.flatten
+      DB[:conn].execute(sql).map do |row|
+        self.new_from_db(row)
+     end
 
 
 
