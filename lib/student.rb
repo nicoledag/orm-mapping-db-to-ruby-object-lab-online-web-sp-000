@@ -2,7 +2,9 @@ class Student
   attr_accessor :id, :name, :grade
 
   def self.new_from_db(row)
-    
+    binding.pry
+    new_student = self.new   #same as saying Student.new
+
   end
 
   def self.all
